@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.geekbounty.engineeringinvoice.MechanicalServicesActivity">
+
+
+    <!-- Topsoil for Preservation-->
+    <TextView
+        android:id="@+id/mechanical_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section1"
+        android:layout_marginTop="10dp"
+        android:textColor="#e9252424"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Provisional Sum of all Mechanical installations"
+        android:layout_marginBottom="5dp"/>
+
+
+    <!-- Topsoil for Preservation rate-->
+    <EditText
+        android:id="@+id/mechanicalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/reounded_edittext"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="45dp"
+        android:inputType="number"
+        android:hint="Amount"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/mech_servicesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+</LinearLayout>

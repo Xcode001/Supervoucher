@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.geekbounty.engineeringinvoice.ElectricalServicesActivity">
+
+    <TextView
+        android:id="@+id/electrical-servicesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/section1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#5285ea"
+        android:layout_gravity="center_horizontal"
+        android:text=" Electrical Services"/>
+
+
+    <!-- Topsoil for Preservation-->
+    <TextView
+        android:id="@+id/electrical_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section1"
+        android:layout_marginTop="10dp"
+        android:textColor="#e9252424"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Provisional Sum of all electrical installations"
+        android:layout_marginBottom="5dp"/>
+
+
+    <!-- Topsoil for Preservation rate-->
+    <EditText
+        android:id="@+id/electricalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/topsoil_width_et"
+        android:layout_marginTop="50dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/reounded_edittext"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="45dp"
+        android:inputType="number"
+        android:hint="Amount"
+        android:layout_marginBottom="5dp"/>
+
+
+</LinearLayout>
