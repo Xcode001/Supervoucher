@@ -122,7 +122,7 @@ public class ElectricalServicesActivity extends AppCompatActivity implements Tit
                     Chunk l1 = new Chunk("A. Provisional Sum allowed for all necessary \n     Electrical Installations                                                                        "+electAmount+"", listFont);
                     Paragraph l1Paragraph = new Paragraph(l1);
 
-                    Chunk l6 = new Chunk("ELECTRICAL INSTALLATIONS TO SUMMARY                                           "+electAmount+"", listFont2);
+                    Chunk l6 = new Chunk("ELECTRICAL INSTALLATIONS TO SUMMARY                           "+electAmount+"", listFont2);
                     Paragraph l6Paragraph = new Paragraph(l6);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 

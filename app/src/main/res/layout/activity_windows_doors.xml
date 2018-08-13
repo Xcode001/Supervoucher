@@ -511,39 +511,10 @@
                 android:layout_marginTop="10dp"
                 android:inputType="number"
                 android:paddingLeft="16dp"
-                android:textSize="16sp" />
-
-            <!-- Groundwork Summary -->
-            <EditText
-                android:id="@+id/groundwork_summary"
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
                 android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/internaldoor1200rate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Summary of Doors and Windows"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="50dp"/>
 
-            <Button
-                android:id="@+id/groundwork_generate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/groundwork_summary"
-                android:layout_marginTop="10dp"
-                android:text="GENERATE GROUND WORK REPORT"
-                android:textColor="#ffffff"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
-                android:textSize="20sp"
-                android:background="#1717d6"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:inputType="number"
-                android:layout_marginBottom="5dp"/>
+
 
         </RelativeLayout>
 

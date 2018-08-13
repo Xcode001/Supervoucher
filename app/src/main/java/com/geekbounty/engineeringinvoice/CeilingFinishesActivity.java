@@ -39,7 +39,7 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
     EditText ceil_fin_gen_area_et,ceil_fin_gen_rate_et, ceiling_painting_area,ceiling_painting_rate;
     TextView ceil_finTitle;
     String mechanical_servicesTitle;
-    int ceil_fin_gen_area,ceil_fin_gen_rate,ceil_fin_gen_amount, ceiling_painting_area_,ceiling_painting_rate_, ceiling_painting_amount;
+    int ceil_fin_gen_area,ceil_fin_gen_rate,ceil_fin_gen_amount, ceiling_painting_area_,ceiling_painting_rate_, ceiling_painting_amount, total_amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +108,7 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
 
                     Font mSubOrderIdFont = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
                     Chunk mSubOrderIdChunk = new Chunk("CEILING FINISHES\n" +
-                            "SURFACE FINISHES", mSubOrderIdFont);
+                            "SURFACE FINISHES\n\n", mSubOrderIdFont);
                     Paragraph mSubOrderIdParagraph = new Paragraph(mSubOrderIdChunk);
                     document.add(mSubOrderIdParagraph);
 
@@ -124,25 +124,23 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                     Paragraph listParagraph = new Paragraph(chunk);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l1 = new Chunk("A. Ceiling generally                                                          132 Sq.M 1800 237,600.00", listFont);
+                    Chunk l1 = new Chunk("A. Ceiling generally                                "+ceil_fin_gen_area+"                 Sq.M      "+ceil_fin_gen_rate+"                 "+ceil_fin_gen_amount
+                            +"", listFont);
                     Paragraph l1Paragraph = new Paragraph(l1);
 
                     Font mSubOrderIdFont3 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
-                    Chunk mSubOrderIdChunk3 = new Chunk("M60 PAINTING/CLEAR FINISHING", mSubOrderIdFont3);
+                    Chunk mSubOrderIdChunk3 = new Chunk("M60 PAINTING/CLEAR FINISHING\n\n", mSubOrderIdFont3);
                     Paragraph mSubOrderIdParagraph3 = new Paragraph(mSubOrderIdChunk3);
-                    document.add(mSubOrderIdParagraph3);
-
                     Font mSubOrderIdFont4 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
                     Chunk mSubOrderIdChunk4 = new Chunk("Painting render, prepare, prime and apply one undercoat\n" +
-                            "Wall Primer and two Finishing Coats Emulsion Paint\n\n", mSubOrderIdFont4);
+                            "Wall Primer and two Finishing Coats Emulsion Paint", mSubOrderIdFont4);
                     Paragraph mSubOrderIdParagraph4 = new Paragraph(mSubOrderIdChunk4);
-                    document.add(mSubOrderIdParagraph4);
 
-                    Chunk l12 = new Chunk("B Ceiling over 300 wide                                                      132 Sq.M 550 72,600.00", listFont);
+                    Chunk l12 = new Chunk("B. Ceiling over 300 wide                          "+ceiling_painting_area_+"              Sq.M          "+ceiling_painting_rate_+"       "+ceiling_painting_amount +"", listFont);
                     Paragraph l1Paragraph2 = new Paragraph(l12);
 
 
-                    Chunk l6 = new Chunk("CEILING FINISHES TO SUMMARY:                                          10000", listFont2);
+                    Chunk l6 = new Chunk("CEILING FINISHES TO SUMMARY:                                          "+total_amount+"", listFont2);
                     Paragraph l6Paragraph = new Paragraph(l6);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -153,7 +151,11 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                     document.add(new Chunk(lineSeparator));
                     document.add(l1Paragraph);
                     document.add(new Chunk(lineSeparator));
+                    document.add(mSubOrderIdParagraph3);
+                    document.add(mSubOrderIdParagraph4);
                     document.add(new Chunk(lineSeparator));
+                    document.add(l1Paragraph2);
+
                     document.add(new Chunk(lineSeparator));
                     document.add(new Chunk(lineSeparator));
                     document.add(l6Paragraph);
@@ -178,10 +180,9 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                 }
 
             } else {
-                //Code for API < 23
                 Log.v(TAG, "Permission is Granted");
                 PdfWriter.getInstance(document, new FileOutputStream(outputPath)); //Writes to the Pdf
-                document.open();
+                document.open(); //Open to write
                 setDoc(document);
                 /***
                  * Variables for further use....
@@ -220,32 +221,21 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                 // Fields of Order Details...
                 // Adding Chunks for Title and value
                 Font mOrderIdFont = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
-                Chunk mOrderIdChunk = new Chunk("ELEMENT 7: FLOOR FINISHES", mOrderIdFont);
+                Chunk mOrderIdChunk = new Chunk("ELEMENT 8: CEILING FINISHES\n\n", mOrderIdFont);
                 Paragraph mOrderIdParagraph = new Paragraph(mOrderIdChunk);
                 document.add(mOrderIdParagraph);
 
                 Font mSubOrderIdFont = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
-                Chunk mSubOrderIdChunk = new Chunk("Floor Finishes", mSubOrderIdFont);
+                Chunk mSubOrderIdChunk = new Chunk("CEILING FINISHES\n" +
+                        "SURFACE FINISHES\n\n", mSubOrderIdFont);
                 Paragraph mSubOrderIdParagraph = new Paragraph(mSubOrderIdChunk);
                 document.add(mSubOrderIdParagraph);
 
                 Font mSubOrderIdFont2 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
-                Chunk mSubOrderIdChunk2 = new Chunk("Lininq/Sheetinq/Dry Partitioning\n\n", mSubOrderIdFont2);
+                Chunk mSubOrderIdChunk2 = new Chunk("600 x 600 x 12mm thick Particle Ceiling Board fixed to\n" +
+                        "Hardwood Noggings (Measured separately)\n\n", mSubOrderIdFont2);
                 Paragraph mSubOrderIdParagraph2 = new Paragraph(mSubOrderIdChunk2);
                 document.add(mSubOrderIdParagraph2);
-
-
-                Font excavatingFont = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
-                Chunk excavatingChunk = new Chunk("SURFACE FINISHES\n\n", excavatingFont);
-                Paragraph excavatingParagraph = new Paragraph(excavatingChunk);
-                document.add(excavatingParagraph);
-
-                Font excavatingFont2 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
-                Chunk excavatingChunk2 = new Chunk("25mm thick glazed vitrified ceramic tiling on 25mm thick\n" +
-                        "Cement Mortar screeded Bed", excavatingFont2);
-                Paragraph excavatingParagraph2 = new Paragraph(excavatingChunk2);
-                document.add(excavatingParagraph2);
-
 
                 Font listFont = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
                 Font listFont2 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent2);
@@ -253,15 +243,23 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                 Paragraph listParagraph = new Paragraph(chunk);
                 listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                Chunk l1 = new Chunk("A. Level or to falls not exceeding \n   15 degrees from horizontal                 100              " +
-                        "Sq.M           60           78000", listFont);
+                Chunk l1 = new Chunk("A. Ceiling generally                                "+ceil_fin_gen_area+"                 Sq.M      "+ceil_fin_gen_rate+"                 "+ceil_fin_gen_amount
+                        +"", listFont);
                 Paragraph l1Paragraph = new Paragraph(l1);
-//
-                Chunk l2 = new Chunk("B. Skirting 100 high                               115              Lin.M          120           13800", listFont);
-                Paragraph l2Paragraph = new Paragraph(l2);
-                listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                Chunk l6 = new Chunk("FLOOR FINISHES TO SUMMARY                                                 13800", listFont2);
+                Font mSubOrderIdFont3 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
+                Chunk mSubOrderIdChunk3 = new Chunk("M60 PAINTING/CLEAR FINISHING\n\n", mSubOrderIdFont3);
+                Paragraph mSubOrderIdParagraph3 = new Paragraph(mSubOrderIdChunk3);
+                Font mSubOrderIdFont4 = new Font(baseFont, mHeadingFontSize, Font.NORMAL, mColorAccent);
+                Chunk mSubOrderIdChunk4 = new Chunk("Painting render, prepare, prime and apply one undercoat\n" +
+                        "Wall Primer and two Finishing Coats Emulsion Paint", mSubOrderIdFont4);
+                Paragraph mSubOrderIdParagraph4 = new Paragraph(mSubOrderIdChunk4);
+
+                Chunk l12 = new Chunk("B. Ceiling over 300 wide                          "+ceiling_painting_area_+"              Sq.M          "+ceiling_painting_rate_+"       "+ceiling_painting_amount +"", listFont);
+                Paragraph l1Paragraph2 = new Paragraph(l12);
+
+
+                Chunk l6 = new Chunk("CEILING FINISHES TO SUMMARY:                                          "+total_amount+"", listFont2);
                 Paragraph l6Paragraph = new Paragraph(l6);
                 listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -272,9 +270,11 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                 document.add(new Chunk(lineSeparator));
                 document.add(l1Paragraph);
                 document.add(new Chunk(lineSeparator));
-                document.add(l2Paragraph);
+                document.add(mSubOrderIdParagraph3);
+                document.add(mSubOrderIdParagraph4);
                 document.add(new Chunk(lineSeparator));
-                document.add(new Chunk(lineSeparator));
+                document.add(l1Paragraph2);
+
                 document.add(new Chunk(lineSeparator));
                 document.add(new Chunk(lineSeparator));
                 document.add(l6Paragraph);
@@ -289,7 +289,10 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
                 document.add(new Chunk(lineSeparator));
                 document.add(new Chunk(lineSeparator));
                 document.add(new Chunk(lineSeparator));
+                //  document.add(list);
+
                 document.close();
+
                 Toast.makeText(getApplicationContext(), "Pdf File Created", Toast.LENGTH_SHORT).show();
             }
         } catch (DocumentException e) {
@@ -399,6 +402,8 @@ public class CeilingFinishesActivity extends AppCompatActivity implements TitleD
             ceiling_painting_area_ = Integer.parseInt(ceiling_painting_area.getText().toString().trim());
             ceiling_painting_rate_ = Integer.parseInt(ceiling_painting_rate.getText().toString().trim());
             ceiling_painting_amount = ceiling_painting_area_ * ceiling_painting_rate_;
+
+            total_amount = ceil_fin_gen_amount + ceiling_painting_amount;
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), "All input field must not be empty", Toast.LENGTH_SHORT).show();

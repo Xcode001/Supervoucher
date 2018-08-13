@@ -75,6 +75,9 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
             reinforcement_bar_weight, reinforcement_bar_rate, masonry_wall_area, masonry_wall_rate, masonry_wall2_area, masonry_wall2_rate, f_volume, f_rate, hardcore_volume, hardcore_rate, anti_termite_area, anti_termite_rate, level_compact_bottom_area, level_compact_bottom_rate, foundation_volume, foundation_rate, beds_poured_on_laterite_volume, beds_poured_on_laterite_rate, clear_polythene_area, clear_polythene_rate;
 
     String topsoil_desc, trench_desc, em_desc, sem_desc, edge_of_bed_desc, isola_desc, ground_work_summary;
+    String ground_work_Title;
+    TextView ground_workTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,7 +121,7 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
     }
     //    Initialise all the views
     private void initViews() {
-
+        ground_workTitle = findViewById(R.id.ground_work_title_tv);
         topsoilLength = findViewById(R.id.topsoil_length_et);
         topsoilWidth = findViewById(R.id.topsoil_width_et);
         topsoilRate = findViewById(R.id.topsoil_rate_et);
@@ -318,7 +321,17 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                 showDialog();
                 return true;
             case R.id.generate_invoice:
-                Toast.makeText(getApplicationContext(), "Generate Invoice", Toast.LENGTH_SHORT).show();
+                ground_work_Title = ground_workTitle.getText().toString().trim();
+                if(ground_work_Title.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Input a Title for the Element", Toast.LENGTH_SHORT).show();
+                }else {
+                    try {
+//                        getValues();
+                        createPdf();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

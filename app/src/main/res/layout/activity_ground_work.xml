@@ -178,21 +178,7 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
 
-            <!-- Trenches Desc-->
-            <EditText
-                android:id="@+id/trenches_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/trench_rate_et"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
+
 
         </RelativeLayout>
         <!-- end Trench -->
@@ -264,20 +250,6 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
             <!-- em desc-->
-            <EditText
-                android:id="@+id/em_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_emRate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
 
             <!-- Disposal: Selected Excavated Material-->
             <TextView
@@ -287,7 +259,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textColor="#e9252424"
-                android:layout_below="@id/em_desc"
+                android:layout_below="@id/et_emRate"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
                 android:text="B. Selected Excavated Material "
@@ -327,27 +299,12 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
 
-            <EditText
-                android:id="@+id/sem_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_semRate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
-
             <!-- Title : Formwork for Instu Concrete-->
             <TextView
                 android:id="@+id/formwork_for_instu_concrete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sem_desc"
+                android:layout_below="@id/et_semRate"
                 android:layout_marginTop="10dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -404,21 +361,6 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
 
-            <EditText
-                android:id="@+id/edge_of_bed_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_edge_of_bedRate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
-
 
             <!-- Formwork for instu - concrete: Isolated Column Base -->
             <TextView
@@ -428,7 +370,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textColor="#e9252424"
-                android:layout_below="@id/edge_of_bed_desc"
+                android:layout_below="@id/et_edge_of_bedRate"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
                 android:text="B. Isolated Column Base"
@@ -468,21 +410,6 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
 
-            <EditText
-                android:id="@+id/isola_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_isolated_column_base_rate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
-
 
             <!-- Reinforcement of Instu Concrete -->
             <TextView
@@ -493,7 +420,7 @@
                 android:textSize="24sp"
                 android:textColor="#5285ea"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/isola_desc"
+                android:layout_below="@id/et_isolated_column_base_rate"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
                 android:text="E30: Reinforcement of Instu Concrete"
@@ -1008,40 +935,15 @@
                 android:layout_centerHorizontal="true"
                 android:inputType="number"
                 android:hint="Rate"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="20dp"/>
 
-            <!-- Groundwork Summary -->
-            <EditText
-                android:id="@+id/groundwork_summary"
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_clear_polythene_rate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Summary of Ground work "
-                android:layout_marginBottom="5dp"/>
-
-            <Button
-                android:id="@+id/groundwork_generate"
+            <TextView
+                android:id="@+id/ground_work_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/groundwork_summary"
-                android:layout_marginTop="10dp"
-                android:text="GENERATE GROUND WORK REPORT"
-                android:textColor="#ffffff"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
-                android:textSize="20sp"
-                android:background="#1717d6"
-                android:paddingLeft="16dp"
-                android:onClick="generateGroundWork"
-                android:paddingRight="16dp"
-                android:inputType="number"
-                android:layout_marginBottom="5dp"/>
+                android:visibility="invisible"/>
+
+
 
         </RelativeLayout>
 

@@ -118,10 +118,10 @@ public class MechanicalServicesActivity extends AppCompatActivity implements Tit
                     Paragraph listParagraph = new Paragraph(chunk);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l1 = new Chunk("A. Provisional Sum allowed for all necessary \n     Mechanical Installations + piping and sewage system                                                      "+mechAmount+"", listFont);
+                    Chunk l1 = new Chunk("A. Provisional Sum allowed for all necessary \n     Mechanical Installations + piping and sewage system                            "+mechAmount+"", listFont);
                     Paragraph l1Paragraph = new Paragraph(l1);
 
-                    Chunk l6 = new Chunk("MECHANICAL INSTALLATIONS TO SUMMARY                                           "+mechAmount+"", listFont2);
+                    Chunk l6 = new Chunk("MECHANICAL INSTALLATIONS TO SUMMARY                              "+mechAmount+"", listFont2);
                     Paragraph l6Paragraph = new Paragraph(l6);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 

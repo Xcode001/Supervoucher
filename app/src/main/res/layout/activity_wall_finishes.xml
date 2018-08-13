@@ -6,4 +6,287 @@
     android:layout_height="match_parent"
     tools:context="com.geekbounty.engineeringinvoice.WallFinishesActivity">
 
+    <RelativeLayout
+        android:id="@+id/topsoil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- Excavation and Filling Title-->
+        <TextView
+            android:id="@+id/plastered_rough_casting_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#5285ea"
+            android:layout_centerHorizontal="true"
+            android:text="A. Plastered Rough cast Coating"/>
+
+        <!-- Topsoil for Preservation-->
+        <TextView
+            android:id="@+id/walls_over_300m_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plastered_rough_casting_header"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#e9252424"
+            android:paddingLeft="16dp"
+            android:text="Walls over 300 m wide"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- Topsoil for Preservation length -->
+        <EditText
+            android:id="@+id/walls_over_300m_1_qty"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_below="@id/walls_over_300m_1"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:background="@drawable/reounded_edittext"
+            android:layout_centerHorizontal="true"
+            android:inputType="number"
+            android:hint="Number"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <!-- Topsoil for Preservation rate-->
+        <EditText
+            android:id="@+id/walls_over_300m_1_rate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/walls_over_300m_1_qty"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/reounded_edittext"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="45dp"
+            android:inputType="number"
+            android:hint="Rate"
+            android:layout_marginBottom="5dp"/>
+
+
+        <!-- Trenches -->
+        <RelativeLayout
+            android:id="@+id/bronzeWindow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/walls_over_300m_1_rate">
+
+            <!--600 X 600 -->
+            <TextView
+                android:id="@+id/block_wide_100_200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="100-200 wide to Concrete or blockwork"
+                android:layout_marginBottom="5dp"/>
+
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/block_wide_100_200_qty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/block_wide_100_200"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Number"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- 600 Width-->
+            <EditText
+                android:id="@+id/block_wide_100_200_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/reounded_edittext"
+                android:layout_below="@+id/block_wide_100_200_qty"
+                android:hint="Rate"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:paddingLeft="16dp"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/ceramic_tiling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/block_wide_100_200_rate"
+                android:textStyle="bold"
+                android:textColor="#5285ea"
+                android:paddingLeft="30dp"
+                android:text="B. N40 CERAMIC TILING/MOSAIC"
+                android:layout_marginBottom="5dp"/>
+
+
+            <!-- 1200 Title-->
+            <TextView
+                android:id="@+id/walls_over_300m_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/ceramic_tiling"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="Walls over 300 wide"
+                android:layout_marginBottom="5dp"/>
+
+            <!--1200 Length -->
+            <EditText
+                android:id="@+id/walls_over_300m_2_qty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/walls_over_300m_2"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Number"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- 1200 Width-->
+            <EditText
+                android:id="@+id/walls_over_300m_2_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/reounded_edittext"
+                android:layout_below="@+id/walls_over_300m_2_qty"
+                android:hint="Rate"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:paddingLeft="16dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/m60_painting_clear_finishing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/walls_over_300m_2_rate"
+                android:textStyle="bold"
+                android:textColor="#5285ea"
+                android:paddingLeft="30dp"
+                android:text="C. M60 PAINTING/CLEAR FINISHING"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- 1500 Title-->
+            <TextView
+                android:id="@+id/gen_surfaces_over_300_girth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/m60_painting_clear_finishing"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="General Surfaces over 300 Girth"
+                android:layout_marginBottom="5dp"/>
+
+            <!--1500 Length -->
+            <EditText
+                android:id="@+id/gen_surfaces_over_300_girth_qty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/gen_surfaces_over_300_girth"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Number"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- 1500 Width-->
+            <EditText
+                android:id="@+id/gen_surfaces_over_300_girth_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/reounded_edittext"
+                android:layout_below="@+id/gen_surfaces_over_300_girth_qty"
+                android:hint="Rate"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:paddingLeft="16dp"
+                android:textSize="16sp" />
+
+            <!-- 2400 Title-->
+            <TextView
+                android:id="@+id/rendered_to_concrete_100_200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/gen_surfaces_over_300_girth_rate"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="100-200 wide; to rendered concrete"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- 2400 Length -->
+            <EditText
+                android:id="@+id/rendered_to_concrete_100_200_qty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/rendered_to_concrete_100_200"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Number"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- 2400 Width-->
+            <EditText
+                android:id="@+id/rendered_to_concrete_100_200_rate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/reounded_edittext"
+                android:layout_below="@+id/rendered_to_concrete_100_200_qty"
+                android:hint="Rate"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+        <!-- end Trench -->
+
+    </RelativeLayout>
+
 </ScrollView>
