@@ -15,8 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".GroundWork">
-        </activity>
+        <activity android:name=".GroundWork" />
         <activity android:name=".FirstActivity" />
         <activity
             android:name=".SecondActivity"
@@ -26,30 +25,43 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.geekbounty.engineeringinvoice.FirstActivity" />
         </activity>
-        <activity android:name=".ExcavatedInternalWallActivity"
-            android:label="Excavated Internal Wall"/>
-        <activity android:name=".StructruralCarcassingActivity"
-            android:label="Structural Carcassing">
-        </activity>
-        <activity android:name=".WindowsDoorsActivity"></activity>
-        <activity android:name=".WallFinishesActivity"
-            android:label="Wall Finishes"/>
-        <activity android:name=".CeilingFinishesActivity"
-            android:label="Ceiling Finishes"/>
-        <activity android:name=".FloorFinishesActivity"
-            android:label="Floor Finishes"/>
-        <activity android:name=".ElectricalServicesActivity"
-            android:label="Electrical Services"/>
-        <activity android:name=".MechanicalServicesActivity"
-            android:label="Mechanical Services"/>
-        <activity android:name=".SummaryActivity"
-            android:label="Summary"/>
+        <activity
+            android:name=".ExcavatedInternalWallActivity"
+            android:label="Excavated Internal Wall" />
+        <activity
+            android:name=".StructruralCarcassingActivity"
+            android:label="Structural Carcassing" />
+        <activity android:name=".WindowsDoorsActivity"
+            android:label="Windows - Doors"/>
+        <activity
+            android:name=".WallFinishesActivity"
+            android:label="Wall Finishes" />
+        <activity
+            android:name=".CeilingFinishesActivity"
+            android:label="Ceiling Finishes" />
+        <activity
+            android:name=".FloorFinishesActivity"
+            android:label="Floor Finishes" />
+        <activity
+            android:name=".ElectricalServicesActivity"
+            android:label="Electrical Services" />
+        <activity
+            android:name=".MechanicalServicesActivity"
+            android:label="Mechanical Services" />
+        <activity
+            android:name=".SummaryActivity"
+            android:label="Summary" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ExternalInternalWallActivity"
+            android:label="External Internal Wall" />
+        <activity android:name=".Cladding_and_Covering_Activity"
+            android:label="Cladding and Covering"/>
     </application>
 
 </manifest>

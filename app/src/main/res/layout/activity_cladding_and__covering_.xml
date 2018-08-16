@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.geekbounty.engineeringinvoice.Cladding_and_Covering_Activity">
+
+    <RelativeLayout
+        android:id="@+id/topsoil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- Excavation and Filling Title-->
+        <TextView
+            android:id="@+id/section1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#5285ea"
+            android:layout_centerHorizontal="true"
+            android:text="H.CLADDING/COVERING"/>
+
+        <!-- Topsoil for Preservation-->
+        <TextView
+            android:id="@+id/section1.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/section1"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#e9252424"
+            android:paddingLeft="16dp"
+            android:text=" Roof Covering"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- Topsoil for Preservation length -->
+        <EditText
+            android:id="@+id/roof_covering_area_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_below="@id/section1.1"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:background="@drawable/reounded_edittext"
+            android:layout_centerHorizontal="true"
+            android:inputType="number"
+            android:hint="Area"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <!-- Topsoil for Preservation rate-->
+        <EditText
+            android:id="@+id/roof_covering_rate_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/roof_covering_area_et"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/reounded_edittext"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="45dp"
+            android:inputType="number"
+            android:hint="Rate"
+            android:layout_marginBottom="5dp"/>
+
+
+        <!-- Steel Doors-->
+        <RelativeLayout
+            android:id="@+id/steelDoors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/roof_covering_rate_et">
+
+
+
+            <!--600 X 600 -->
+            <TextView
+                android:id="@+id/ridge_cap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/section2"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text=" Ridge Cap"
+                android:layout_marginBottom="5dp"/>
+
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/ridge_cap_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/ridge_cap"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/ridge_cap_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/ridge_cap_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/valley"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/ridge_cap_rate"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text=" Valley"
+                android:layout_marginBottom="5dp"/>
+
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/valley_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/valley"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/valley_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/valley_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/eaves_angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/valley_rate"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text=" Eaves Angle"
+                android:layout_marginBottom="5dp"/>
+
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/eaves_angle_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/eaves_angle"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/eaves_angle_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/eaves_angle_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/cladding_covering_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

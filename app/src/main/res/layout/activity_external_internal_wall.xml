@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.geekbounty.engineeringinvoice.ExternalInternalWallActivity">
+
+    <RelativeLayout
+        android:id="@+id/topsoil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- Excavation and Filling Title-->
+        <TextView
+            android:id="@+id/section1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#5285ea"
+            android:layout_centerHorizontal="true"
+            android:text="E10 IN SITU CONCRETE"/>
+
+        <!-- Topsoil for Preservation-->
+        <TextView
+            android:id="@+id/section1.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/section1"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#e9252424"
+            android:paddingLeft="16dp"
+            android:text="Lintels generally"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- Topsoil for Preservation length -->
+        <EditText
+            android:id="@+id/lintels_generally_area"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_below="@id/section1.1"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:background="@drawable/reounded_edittext"
+            android:layout_centerHorizontal="true"
+            android:inputType="number"
+            android:hint="Area"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <!-- Topsoil for Preservation rate-->
+        <EditText
+            android:id="@+id/lintels_generally_rate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/lintels_generally_area"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/reounded_edittext"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="45dp"
+            android:inputType="number"
+            android:hint="Rate"
+            android:layout_marginBottom="5dp"/>
+
+
+        <!-- Steel Doors-->
+        <RelativeLayout
+            android:id="@+id/steelDoors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lintels_generally_rate">
+
+
+            <!--600 X 600 -->
+            <TextView
+                android:id="@+id/rectangular_lintel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/section2"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="Rectangular lintel"
+                android:layout_marginBottom="5dp"/>
+
+
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/rectangular_lintel_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/rectangular_lintel"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+
+
+            <EditText
+                android:id="@+id/rectangular_lintel_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/rectangular_lintel_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- Excavation and Filling Title-->
+            <TextView
+                android:id="@+id/reinforcement_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_below="@id/rectangular_lintel_rate"
+                android:textStyle="bold"
+                android:textColor="#5285ea"
+                android:layout_centerHorizontal="true"
+                android:text="REINFORCEMENT FOR IN SITU CONCRETE"/>
+
+
+            <TextView
+                android:id="@+id/bars_norminal_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/reinforcement_title"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="Bars 8 - 12mm nominal size"
+                android:layout_marginBottom="5dp"/>
+            <!--600 Length -->
+
+
+            <EditText
+                android:id="@+id/bars_norminal_size_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/bars_norminal_size"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/bars_norminal_size_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/bars_norminal_size_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:layout_marginBottom="5dp"/>
+
+
+            <TextView
+                android:id="@+id/masonry_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_below="@id/bars_norminal_size_rate"
+                android:textStyle="bold"
+                android:textColor="#5285ea"
+                android:layout_centerHorizontal="true"
+                android:text="REINFORCEMENT FOR IN SITU CONCRETE"/>
+
+            <!-- New Session-->
+            <TextView
+                android:id="@+id/walls_230m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/masonry_title"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="Walls 230mm thick"
+                android:layout_marginBottom="5dp"/>
+            <!--600 Length -->
+
+
+
+            <EditText
+                android:id="@+id/walls_230m_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/walls_230m"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/walls_230m_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/walls_230m_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/walls_150mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/walls_230m_rate"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="Walls 150mm thick"
+                android:layout_marginBottom="5dp"/>
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/walls_150mm_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/walls_150mm"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/walls_150mm_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/walls_150mm_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/thick_screen_walling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/walls_150mm_rate"
+                android:textColor="#e9252424"
+                android:paddingLeft="30dp"
+                android:text="150mm thick screen walling"
+                android:layout_marginBottom="5dp"/>
+
+            <!-- Headings-->
+
+            MASONRY
+            <!--600 Length -->
+            <EditText
+                android:id="@+id/thick_screen_walling_area"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/thick_screen_walling"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Area"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/thick_screen_walling_rate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/thick_screen_walling_area"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/external_int_wall_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

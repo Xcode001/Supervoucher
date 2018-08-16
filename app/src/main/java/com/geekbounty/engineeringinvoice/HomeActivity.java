@@ -44,12 +44,12 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(roof_intent);
                         break;
                     case 2:
-//                        Intent covering_intent = new Intent(getApplicationContext(), GroundWork.class);
-//                        startActivity(covering_intent);
+                        Intent covering_intent = new Intent(getApplicationContext(), Cladding_and_Covering_Activity.class);
+                        startActivity(covering_intent);
                         break;
                     case 3:
-//                        Intent external_intent = new Intent(getApplicationContext(), GroundWork.class);
-//                        startActivity(external_intent);
+                        Intent external_intent = new Intent(getApplicationContext(), Cladding_and_Covering_Activity.class);
+                        startActivity(external_intent);
                         break;
                     case 4:
                         Intent windows_intent = new Intent(getApplicationContext(), WindowsDoorsActivity.class);

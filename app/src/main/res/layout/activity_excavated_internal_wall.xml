@@ -97,22 +97,6 @@
             android:layout_marginBottom="5dp"/>
 
         <!-- Top soil for preservation desc-->
-        <EditText
-            android:id="@+id/topsoil_desc"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:textSize="16sp"
-            android:background="@drawable/reounded_edittext"
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"
-            android:layout_below="@id/topsoil_rate_et"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="16dp"
-            android:layout_centerHorizontal="true"
-            android:inputType="text"
-            android:hint="Description"
-            android:layout_marginBottom="5dp"/>
-
 
 
         <!-- Trenches -->
@@ -120,7 +104,7 @@
             android:id="@+id/trench"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/topsoil_desc">
+            android:layout_below="@id/topsoil_rate_et">
 
             <!-- Trench Title-->
             <TextView
@@ -198,21 +182,7 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
 
-            <!-- Trenches Desc-->
-            <EditText
-                android:id="@+id/trenches_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/trench_rate_et"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
+
 
         </RelativeLayout>
         <!-- end Trench -->
