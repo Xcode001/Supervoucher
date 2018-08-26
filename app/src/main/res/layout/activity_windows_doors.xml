@@ -41,7 +41,7 @@
 
         <!-- Topsoil for Preservation length -->
         <EditText
-            android:id="@+id/topsoil_length_et"
+            android:id="@+id/onsite_600_600_number_et"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginRight="45dp"
@@ -57,13 +57,15 @@
             android:layout_marginBottom="5dp"/>
 
 
+        onsite_600_600_number_et
+        onsite_600_600_rate_et
 
         <!-- Topsoil for Preservation rate-->
         <EditText
-            android:id="@+id/topsoil_rate_et"
+            android:id="@+id/onsite_600_600_rate_et"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@id/topsoil_length_et"
+            android:layout_below="@id/onsite_600_600_number_et"
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:layout_marginRight="45dp"
@@ -73,14 +75,17 @@
             android:inputType="number"
             android:hint="Rate"
             android:layout_marginBottom="5dp"/>
-
-
+        <TextView
+            android:id="@+id/win_doors_title"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <!-- Trenches -->
         <RelativeLayout
             android:id="@+id/bronzeWindow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/topsoil_rate_et">
+            android:layout_below="@id/onsite_600_600_rate_et">
 
             <!--600 X 600 -->
             <TextView
@@ -96,7 +101,7 @@
 
             <!--600 Length -->
             <EditText
-                android:id="@+id/trench_length_et"
+                android:id="@+id/onsite_900_600_number_et"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/section2.1"
@@ -112,13 +117,13 @@
 
             <!-- 600 Width-->
             <EditText
-                android:id="@+id/trench_width_et"
+                android:id="@+id/onsite_900_600_rate_et"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="45dp"
                 android:layout_marginRight="45dp"
                 android:background="@drawable/reounded_edittext"
-                android:layout_below="@+id/trench_length_et"
+                android:layout_below="@+id/onsite_900_600_number_et"
                 android:hint="Rate"
                 android:layout_marginTop="10dp"
                 android:inputType="number"
@@ -132,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
-                android:layout_below="@id/trench_width_et"
+                android:layout_below="@id/onsite_900_600_rate_et"
                 android:textColor="#e9252424"
                 android:paddingLeft="30dp"
                 android:text="Onsite 1200 X 1200 high overall "
@@ -198,7 +203,7 @@
                 android:hint="Number"
                 android:layout_marginBottom="5dp"/>
 
-            <!-- 1500 Width-->
+           <!-- 1500 Width-->
             <EditText
                 android:id="@+id/onsite1500rate"
                 android:layout_width="match_parent"
@@ -241,6 +246,7 @@
                 android:inputType="number"
                 android:hint="Number"
                 android:layout_marginBottom="5dp"/>
+
 
             <!-- 2400 Width-->
             <EditText
@@ -285,6 +291,7 @@
                 android:inputType="number"
                 android:hint="Number"
                 android:layout_marginBottom="5dp"/>
+
 
             <!-- 2000 Width-->
             <EditText
@@ -351,6 +358,22 @@
                 android:hint="Number"
                 android:layout_marginBottom="5dp"/>
 
+            <EditText
+                android:id="@+id/steeldoorsRate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/steeldoorsNumber"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:background="@drawable/reounded_edittext"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:inputType="number"
+                android:hint="Rate"
+                android:layout_marginBottom="5dp"/>
+
+
             <!-- Excavation and Filling Title-->
             <TextView
                 android:id="@+id/internal_door_timber"
@@ -359,25 +382,10 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_below="@id/steeldoorsNumber"
+                android:layout_below="@id/steeldoorsRate"
                 android:textColor="#5285ea"
                 android:layout_centerHorizontal="true"
                 android:text="I. Internal door Timber"/>
-
-
-            <EditText
-                android:id="@+id/steeldoorsDesc_et"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_below="@+id/steeldoorsNumber"
-                android:hint="Description"
-                android:layout_marginTop="10dp"
-                android:inputType="number"
-                android:paddingLeft="16dp"
-                android:textSize="16sp" />
 
 
 
@@ -388,10 +396,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
-                android:layout_below="@id/steeldoorsDesc_et"
+                android:layout_below="@id/internal_door_timber"
                 android:textColor="#e9252424"
                 android:paddingLeft="30dp"
-                android:text="Onsite 1200 X 1200 high overall "
+                android:text="Onsite 750 X 2100mm high overall "
                 android:layout_marginBottom="5dp"/>
 
             <!--750 Length -->
@@ -435,7 +443,7 @@
                 android:layout_below="@id/internaldoor750rate"
                 android:textColor="#e9252424"
                 android:paddingLeft="30dp"
-                android:text="Onsite 1200 X 1200 high overall "
+                android:text="Onsite 900 X 2100mm high overall "
                 android:layout_marginBottom="5dp"/>
 
             <!-- 900 Length -->
@@ -479,8 +487,9 @@
                 android:layout_below="@id/internaldoor900rate"
                 android:textColor="#e9252424"
                 android:paddingLeft="30dp"
-                android:text="DIHO 2400 X 1200 high overall "
+                android:text="1200 X 2100mm high overall "
                 android:layout_marginBottom="5dp"/>
+
 
             <!-- 1200 Length -->
             <EditText

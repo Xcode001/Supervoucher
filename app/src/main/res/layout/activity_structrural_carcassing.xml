@@ -48,7 +48,7 @@
         </LinearLayout>
         <!-- Topsoil for Preservation length -->
         <EditText
-            android:id="@+id/topsoil_length_et"
+            android:id="@+id/rafter75_length_et"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginRight="45dp"
@@ -63,14 +63,12 @@
             android:hint="Length"
             android:layout_marginBottom="5dp"/>
 
-
-
         <!-- Topsoil for Preservation rate-->
         <EditText
-            android:id="@+id/topsoil_rate_et"
+            android:id="@+id/rafter75_rate_et"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_below="@id/topsoil_length_et"
+            android:layout_below="@id/rafter75_length_et"
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:layout_marginRight="45dp"
@@ -81,13 +79,18 @@
             android:hint="Rate"
             android:layout_marginBottom="5dp"/>
 
+        <TextView
+            android:id="@+id/structural_carcassing_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
 
         <!-- Trenches -->
         <RelativeLayout
             android:id="@+id/trench"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/topsoil_rate_et">
+            android:layout_below="@id/rafter75_rate_et">
 
             <!-- Trench Title-->
             <TextView
@@ -101,9 +104,11 @@
                 android:text="B. 75 x 150mm Kingpost"
                 android:layout_marginBottom="5dp"/>
 
+
+
             <!--Trench Length -->
             <EditText
-                android:id="@+id/trench_length_et"
+                android:id="@+id/kingpost75_length_et"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_below="@id/section2.1"
@@ -119,10 +124,10 @@
 
             <!-- Trench Rate-->
             <EditText
-                android:id="@+id/trench_rate_et"
+                android:id="@+id/kingpost75_rate_et"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_below="@id/trench_length_et"
+                android:layout_below="@id/kingpost75_length_et"
                 android:layout_marginTop="10dp"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"
@@ -292,7 +297,7 @@
                 android:textColor="#e9252424"
                 android:paddingLeft="16dp"
                 android:layout_below="@id/struts_rate"
-                android:text="F. 50 x 100mm Struts "
+                android:text="F. 50 x 100mm purlins"
                 android:layout_marginBottom="5dp"/>
 
             <!--Trench Length -->
@@ -327,7 +332,6 @@
                 android:inputType="number"
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
-
 
             <!-- Trench Title-->
             <TextView

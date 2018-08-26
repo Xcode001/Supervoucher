@@ -73,6 +73,9 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
     int topsoil_length, topsoil_width, topsoil_rate,  trench_length, trench_width, trench_depth, trench_rate, em_volume, em_rate,
             sem_volume, sem_rate, edge_of_bed_length, edge_of_bed_rate, isolated_column_base_area, isolated_column_base_rate, reinforcement_bar_size,
             reinforcement_bar_weight, reinforcement_bar_rate, masonry_wall_area, masonry_wall_rate, masonry_wall2_area, masonry_wall2_rate, f_volume, f_rate, hardcore_volume, hardcore_rate, anti_termite_area, anti_termite_rate, level_compact_bottom_area, level_compact_bottom_rate, foundation_volume, foundation_rate, beds_poured_on_laterite_volume, beds_poured_on_laterite_rate, clear_polythene_area, clear_polythene_rate;
+    int topsoil_amount, trench_amount, em_amount, sem_amount, edge_of_bed_amount, isolated_column_base_amount, reinforcement_bar_amount, masonry_wall_amount,
+            masonry_wall2_amount, f_amount, hardcore_amount, anti_termite_amount, level_compact_bottom_amount, foundation_amount,
+            beds_poured_on_laterite_amount, clear_polythene_amount;
 
     String topsoil_desc, trench_desc, em_desc, sem_desc, edge_of_bed_desc, isola_desc, ground_work_summary;
     String ground_work_Title;
@@ -175,62 +178,6 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //Get integers and text from the edittext
-        try{
-            topsoil_length = Integer.parseInt(topsoilLength.getText().toString());
-            topsoil_width = Integer.parseInt(topsoilWidth.getText().toString().trim());
-            topsoil_rate = Integer.parseInt(topsoilRate.getText().toString().trim());
-
-            trench_length = Integer.parseInt(trenchLength.getText().toString().trim());
-            trench_width = Integer.parseInt(trenchWidth.getText().toString().trim());
-            trench_depth = Integer.parseInt(trenchDepth.getText().toString().trim());
-            trench_rate = Integer.parseInt(trenchRate.getText().toString().trim());
-
-            em_volume =  Integer.parseInt(emVolume.getText().toString().trim());
-            em_rate = Integer.parseInt(emRate.getText().toString().trim());
-
-            sem_volume = Integer.parseInt(semVolume.getText().toString().trim());
-            sem_rate = Integer.parseInt(semRate.getText().toString());
-
-            edge_of_bed_length = Integer.parseInt(edgeofbedLength.getText().toString().trim());
-            edge_of_bed_rate = Integer.parseInt(edgeofbedRate.getText().toString().trim());
-
-            isolated_column_base_area = Integer.parseInt(isolatedColumnBaseArea.getText().toString().trim());
-            isolated_column_base_rate = Integer.parseInt(isolatedColumnbaseRate.getText().toString().trim());
-
-            reinforcement_bar_size = Integer.parseInt(reinforcementBarSize.getText().toString().trim());
-            reinforcement_bar_weight = Integer.parseInt(reinforcementBarWeight.getText().toString().trim());
-            reinforcement_bar_rate = Integer.parseInt(reinforcementBarRate.getText().toString().trim());
-
-            masonry_wall_area = Integer.parseInt(masonrywallArea.getText().toString().trim());
-            masonry_wall_rate = Integer.parseInt(masonryWallrate.getText().toString().trim());
-            masonry_wall2_area = Integer.parseInt(masonryWall2Area.getText().toString().trim());
-            masonry_wall2_rate = Integer.parseInt(masonryWall2Rate.getText().toString().trim());
-
-            f_volume = Integer.parseInt(fVolume.getText().toString().trim());
-            f_rate = Integer.parseInt(fRate.getText().toString().trim());
-
-            hardcore_volume = Integer.parseInt(hardcoreVolume.getText().toString().trim());
-            hardcore_rate =  Integer.parseInt(hardcoreRate.getText().toString().trim());
-
-            anti_termite_area = Integer.parseInt(antiTermiteArea.getText().toString().trim());
-            anti_termite_rate = Integer.parseInt(antiTermiteRate.getText().toString().trim());
-
-            level_compact_bottom_area = Integer.parseInt(levelCompactBottomArea.getText().toString().trim());
-            level_compact_bottom_rate = Integer.parseInt(levelCompactBottomRate.getText().toString().trim());
-
-            foundation_volume = Integer.parseInt(foundationVolume.getText().toString().trim());
-            foundation_rate = Integer.parseInt(foundationRate.getText().toString().trim());
-
-            beds_poured_on_laterite_volume = Integer.parseInt(bedsPouredOnLateriteVolume.getText().toString().trim());
-            beds_poured_on_laterite_rate = Integer.parseInt(bedsPouredOnLateriteRate.getText().toString().trim());
-
-            clear_polythene_area = Integer.parseInt(clearPolytheneArea.getText().toString().trim());
-            clear_polythene_rate = Integer.parseInt(clearPolytheneRate.getText().toString().trim());
-        }catch (Exception e){
-            Toast.makeText(this, "Make sure every input field is not empty", Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override
@@ -271,6 +218,82 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
 
     // get values from the the input input field
     private void getValues() {
+
+        //Get integers and text from the edittext
+        try{
+            topsoil_length = Integer.parseInt(topsoilLength.getText().toString());
+            topsoil_width = Integer.parseInt(topsoilWidth.getText().toString().trim());
+            topsoil_rate = Integer.parseInt(topsoilRate.getText().toString().trim());
+            topsoil_amount = topsoil_length * topsoil_width * topsoil_rate;
+
+            trench_length = Integer.parseInt(trenchLength.getText().toString().trim());
+            trench_width = Integer.parseInt(trenchWidth.getText().toString().trim());
+            trench_depth = Integer.parseInt(trenchDepth.getText().toString().trim());
+            trench_rate = Integer.parseInt(trenchRate.getText().toString().trim());
+            trench_amount = trench_length * trench_width * trench_depth * trench_rate;
+
+
+            em_volume =  Integer.parseInt(emVolume.getText().toString().trim());
+            em_rate = Integer.parseInt(emRate.getText().toString().trim());
+            em_amount = em_volume * em_rate;
+
+            sem_volume = Integer.parseInt(semVolume.getText().toString().trim());
+            sem_rate = Integer.parseInt(semRate.getText().toString());
+            sem_amount = sem_volume * sem_rate;
+
+            edge_of_bed_length = Integer.parseInt(edgeofbedLength.getText().toString().trim());
+            edge_of_bed_rate = Integer.parseInt(edgeofbedRate.getText().toString().trim());
+            edge_of_bed_amount = edge_of_bed_length * edge_of_bed_rate;
+
+            isolated_column_base_area = Integer.parseInt(isolatedColumnBaseArea.getText().toString().trim());
+            isolated_column_base_rate = Integer.parseInt(isolatedColumnbaseRate.getText().toString().trim());
+            isolated_column_base_amount = isolated_column_base_area *isolated_column_base_area;
+
+            reinforcement_bar_size = Integer.parseInt(reinforcementBarSize.getText().toString().trim());
+            reinforcement_bar_weight = Integer.parseInt(reinforcementBarWeight.getText().toString().trim());
+            reinforcement_bar_rate = Integer.parseInt(reinforcementBarRate.getText().toString().trim());
+            reinforcement_bar_amount = reinforcement_bar_size * reinforcement_bar_weight * reinforcement_bar_rate;
+
+            masonry_wall_area = Integer.parseInt(masonrywallArea.getText().toString().trim());
+            masonry_wall_rate = Integer.parseInt(masonryWallrate.getText().toString().trim());
+            masonry_wall_amount = masonry_wall_area * masonry_wall_rate;
+
+            masonry_wall2_area = Integer.parseInt(masonryWall2Area.getText().toString().trim());
+            masonry_wall2_rate = Integer.parseInt(masonryWall2Rate.getText().toString().trim());
+            masonry_wall2_amount = masonry_wall2_area * masonry_wall2_rate;
+
+            f_volume = Integer.parseInt(fVolume.getText().toString().trim());
+            f_rate = Integer.parseInt(fRate.getText().toString().trim());
+            f_amount = f_volume * f_rate;
+
+
+            hardcore_volume = Integer.parseInt(hardcoreVolume.getText().toString().trim());
+            hardcore_rate =  Integer.parseInt(hardcoreRate.getText().toString().trim());
+            hardcore_amount = hardcore_volume * hardcore_rate;
+
+            anti_termite_area = Integer.parseInt(antiTermiteArea.getText().toString().trim());
+            anti_termite_rate = Integer.parseInt(antiTermiteRate.getText().toString().trim());
+            anti_termite_amount = anti_termite_area * anti_termite_rate;
+
+            level_compact_bottom_area = Integer.parseInt(levelCompactBottomArea.getText().toString().trim());
+            level_compact_bottom_rate = Integer.parseInt(levelCompactBottomRate.getText().toString().trim());
+            level_compact_bottom_amount = level_compact_bottom_rate * level_compact_bottom_area;
+
+            foundation_volume = Integer.parseInt(foundationVolume.getText().toString().trim());
+            foundation_rate = Integer.parseInt(foundationRate.getText().toString().trim());
+            foundation_amount = foundation_volume * foundation_rate;
+
+            beds_poured_on_laterite_volume = Integer.parseInt(bedsPouredOnLateriteVolume.getText().toString().trim());
+            beds_poured_on_laterite_rate = Integer.parseInt(bedsPouredOnLateriteRate.getText().toString().trim());
+            beds_poured_on_laterite_amount = beds_poured_on_laterite_volume * beds_poured_on_laterite_rate;
+
+            clear_polythene_area = Integer.parseInt(clearPolytheneArea.getText().toString().trim());
+            clear_polythene_rate = Integer.parseInt(clearPolytheneRate.getText().toString().trim());
+            clear_polythene_amount = clear_polythene_area * clear_polythene_rate;
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), "All input field must not be empty", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -347,15 +370,17 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     Paragraph listParagraph = new Paragraph(chunk);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l1 = new Chunk("A. Top Soil for Preservation                    115              Sq.M          +tprate+           + (tpLength * tpBreadth *tprate)", listFont);
+//                  ,
+                    Chunk l1 = new Chunk("A. Top Soil for Preservation                    115              Sq.M          +tprate+          " +   topsoil_amount, listFont);
                     Paragraph l1Paragraph = new Paragraph(l1);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 //
-                    Chunk l2 = new Chunk("B. Trenches from stripped level                 115              Sq.M          120           13800", listFont);
+                    Chunk l2 = new Chunk("B. Trenches from stripped level                 115              Sq.M          120           "+ trench_amount, listFont);
                     Paragraph l2Paragraph = new Paragraph(l2);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l3 = new Chunk("C. Pits from Stripped level                     115              Sq.M          120           13800", listFont);
+//                    , , edge_of_bed_amount, isolated_column_base_amount
+                    Chunk l3 = new Chunk("C. Pits from Stripped level                     0              Sq.M          0           "+0, listFont);
                     Paragraph l3Paragraph = new Paragraph(l3);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -363,11 +388,11 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     Paragraph l4Paragraph = new Paragraph(l4);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l5 = new Chunk("D. Excavated Material off-site                  115              Sq.M          120           13800", listFont);
+                    Chunk l5 = new Chunk("D. Excavated Material off-site                  115              Sq.M          120           "+ em_amount, listFont);
                     Paragraph l5Paragraph = new Paragraph(l5);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l6 = new Chunk("E. Filling to excavation obtained from on-site  115              Sq.M          120           13800", listFont);
+                    Chunk l6 = new Chunk("E. Filling to excavation obtained from on-site  115              Sq.M          120           "+ sem_amount, listFont);
                     Paragraph l6Paragraph = new Paragraph(l6);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -410,7 +435,9 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     Chunk l16 = new Chunk("K. Beds, poured on laterite earth                    115              Sq.M          120           13800", listFont);
                     Paragraph l16Paragraph = new Paragraph(l16);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
-
+//                    reinforcement_bar_amount, masonry_wall_amount,
+//                            masonry_wall2_amount, f_amount, hardcore_amount, anti_termite_amount, level_compact_bottom_amount, foundation_amount,
+//                            beds_poured_on_laterite_amount, clear_polythene_amount;
                     Chunk l17 = new Chunk("To Collection                                              13800", listFont);
                     Paragraph l17Paragraph = new Paragraph(l17);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
