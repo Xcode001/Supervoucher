@@ -370,12 +370,19 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     Paragraph listParagraph = new Paragraph(chunk);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
+
+//                    edge_of_bed_length, edge_of_bed_rate, isolated_column_base_area,
+//                            isolated_column_base_rate, reinforcement_bar_size,
+//                    reinforcement_bar_weight, reinforcement_bar_rate, masonry_wall_area, masonry_wall_rate, masonry_wall2_area, masonry_wall2_rate,
+//                            f_volume, f_rate, hardcore_volume, hardcore_rate, anti_termite_area, anti_termite_rate, level_compact_bottom_area,
+//                            level_compact_bottom_rate, foundation_volume, foundation_rate, beds_poured_on_laterite_volume,
+//                            beds_poured_on_laterite_rate, clear_polythene_area, clear_polythene_rate;
 //                  ,
-                    Chunk l1 = new Chunk("A. Top Soil for Preservation                    115              Sq.M          +tprate+          " +   topsoil_amount, listFont);
+                    Chunk l1 = new Chunk("A. Top Soil for Preservation                    "+topsoil_length*topsoil_width+"              Sq.M          "+topsoil_rate+"         " +   topsoil_amount, listFont);
                     Paragraph l1Paragraph = new Paragraph(l1);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 //
-                    Chunk l2 = new Chunk("B. Trenches from stripped level                 115              Sq.M          120           "+ trench_amount, listFont);
+                    Chunk l2 = new Chunk("B. Trenches from stripped level                "+ trench_length*trench_width*trench_depth+"              Cu.M          "+trench_rate+"          "+ trench_amount, listFont);
                     Paragraph l2Paragraph = new Paragraph(l2);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -388,11 +395,12 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     Paragraph l4Paragraph = new Paragraph(l4);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l5 = new Chunk("D. Excavated Material off-site                  115              Sq.M          120           "+ em_amount, listFont);
+                    Chunk l5 = new Chunk("D. Excavated Material off-site                  "+em_volume+"               Sq.M          "+em_rate+"           "+ em_amount, listFont);
                     Paragraph l5Paragraph = new Paragraph(l5);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l6 = new Chunk("E. Filling to excavation obtained from on-site  115              Sq.M          120           "+ sem_amount, listFont);
+
+                    Chunk l6 = new Chunk("E. Filling to excavation obtained from on-site  "+sem_volume+"              Sq.M          "+sem_rate+"           "+ sem_amount, listFont);
                     Paragraph l6Paragraph = new Paragraph(l6);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 

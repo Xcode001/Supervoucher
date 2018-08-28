@@ -178,6 +178,12 @@ public class ExternalInternalWallActivity extends AppCompatActivity implements T
                     document.add(new Chunk(lineSeparator));
                     document.add(new Chunk(lineSeparator));
                     document.add(l1Paragraph4);
+                    document.add(new Chunk(lineSeparator));
+                    document.add(new Chunk(lineSeparator));
+                    document.add(l1Paragraph5);
+                    document.add(new Chunk(lineSeparator));
+                    document.add(new Chunk(lineSeparator));
+                    document.add(l1Paragraph6);
 
 
                     document.add(new Chunk(lineSeparator));

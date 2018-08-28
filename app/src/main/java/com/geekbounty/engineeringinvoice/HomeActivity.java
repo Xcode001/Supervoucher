@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(covering_intent);
                         break;
                     case 3:
-                        Intent external_intent = new Intent(getApplicationContext(), Cladding_and_Covering_Activity.class);
+                        Intent external_intent = new Intent(getApplicationContext(), ExternalInternalWallActivity.class);
                         startActivity(external_intent);
                         break;
                     case 4:
