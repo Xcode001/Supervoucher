@@ -134,10 +134,8 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
         trenchRate = findViewById(R.id.trench_rate_et);
         emVolume = findViewById(R.id.et_emVolume);
         emRate = findViewById(R.id.et_emRate);
-        emDesc = findViewById(R.id.em_desc);
         semVolume = findViewById(R.id.et_semVolume);
         semRate = findViewById(R.id.et_semRate);
-        semDesc = findViewById(R.id.sem_desc);
         edgeofbedLength =  findViewById(R.id.et_edge_of_bedLength);
         edgeofbedRate = findViewById(R.id.et_edge_of_bedRate);
         edgeofbedDesc = findViewById(R.id.edge_of_bed_desc);
@@ -377,17 +375,18 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
 //                            f_volume, f_rate, hardcore_volume, hardcore_rate, anti_termite_area, anti_termite_rate, level_compact_bottom_area,
 //                            level_compact_bottom_rate, foundation_volume, foundation_rate, beds_poured_on_laterite_volume,
 //                            beds_poured_on_laterite_rate, clear_polythene_area, clear_polythene_rate;
-//                  ,
-                    Chunk l1 = new Chunk("A. Top Soil for Preservation                    "+topsoil_length*topsoil_width+"              Sq.M          "+topsoil_rate+"         " +   topsoil_amount, listFont);
+                    Chunk l1 = new Chunk("A. Top Soil for Preservation             "+topsoil_length*topsoil_width+"         Sq.M          "+topsoil_rate+"         " +   topsoil_amount, listFont);
                     Paragraph l1Paragraph = new Paragraph(l1);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 //
-                    Chunk l2 = new Chunk("B. Trenches from stripped level                "+ trench_length*trench_width*trench_depth+"              Cu.M          "+trench_rate+"          "+ trench_amount, listFont);
+                    Chunk l2 = new Chunk("B. Trenches from stripped level          "+ trench_length*trench_width*trench_depth+"          Cu.M        "+trench_rate+"          "+ trench_amount, listFont);
                     Paragraph l2Paragraph = new Paragraph(l2);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-//                    , , edge_of_bed_amount, isolated_column_base_amount
-                    Chunk l3 = new Chunk("C. Pits from Stripped level                     0              Sq.M          0           "+0, listFont);
+
+
+//                  edge_of_bed_amount, isolated_column_base_amount
+                    Chunk l3 = new Chunk("C. Pits from Stripped level                     0                   Sq.M          0           "+0, listFont);
                     Paragraph l3Paragraph = new Paragraph(l3);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -400,31 +399,45 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
 
-                    Chunk l6 = new Chunk("E. Filling to excavation obtained from on-site  "+sem_volume+"              Sq.M          "+sem_rate+"           "+ sem_amount, listFont);
+
+                    Chunk l41 = new Chunk("Selected Excavated Material", listFont);
+                    Paragraph l41Paragraph = new Paragraph(l41);
+                    listParagraph.setAlignment(Element.ALIGN_CENTER);
+
+                    Chunk l6 = new Chunk("E. Filling to excavation obtained\n from on-site  "+sem_volume+"              Sq.M          "+sem_rate+"           "+ sem_amount, listFont);
                     Paragraph l6Paragraph = new Paragraph(l6);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
+
+
 
                     Chunk l7 = new Chunk("Filling", listFont);
                     Paragraph l7Paragraph = new Paragraph(l7);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l8 = new Chunk("F. Filling to excavation obtained off-site      115              Sq.M          120           13800", listFont);
+                    /*edge_of_bed_length, edge_of_bed_rate, isolated_column_base_area, isolated_column_base_rate, reinforcement_bar_size,
+                            reinforcement_bar_weight, reinforcement_bar_rate, masonry_wall_area, masonry_wall_rate, masonry_wall2_area, masonry_wall2_rate, f_volume, f_rate, hardcore_volume, hardcore_rate, anti_termite_area, anti_termite_rate, level_compact_bottom_area, level_compact_bottom_rate, foundation_volume,
+                            foundation_rate, beds_poured_on_laterite_volume, beds_poured_on_laterite_rate, clear_polythene_area, clear_polythene_rate; */
+
+
+                    Chunk l8 = new Chunk("F. Filling to excavation obtained off-site      "+ f_volume+"        Cu.M          "+ f_rate+"      "+f_amount, listFont);
                     Paragraph l8Paragraph = new Paragraph(l8);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l9 = new Chunk("Hardcore", listFont);
+
+
+                    Chunk l9 = new Chunk("\n\nHardcore", listFont);
                     Paragraph l9Paragraph = new Paragraph(l9);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l0 = new Chunk("G. Filling to make up levels obtained off-site  115              Sq.M          120           13800", listFont);
+                    Chunk l0 = new Chunk("G. Filling to make up levels obtained off-site  "+hardcore_volume+"              Sq.M          "+hardcore_rate+"       "+hardcore_amount, listFont);
                     Paragraph l10Paragraph = new Paragraph(l0);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l11 = new Chunk("H. Anti-termite solution to sides and bottom of excavation                  115              Sq.M          120           13800", listFont);
+                    Chunk l11 = new Chunk("H. Anti-termite solution to sides and bottom of excavation "+anti_termite_area+"                             Sq.M    "+anti_termite_rate+"      "+anti_termite_amount, listFont);
                     Paragraph l11Paragraph = new Paragraph(l11);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l12 = new Chunk("I. Level and Compact the bottom of excavation to receive concrete                    115              Sq.M          120           13800", listFont);
+                    Chunk l12 = new Chunk("I. Level and Compact the bottom of\n excavation to receive concrete                   "+level_compact_bottom_area+"              Sq.M     "+level_compact_bottom_rate+"               "+level_compact_bottom_amount, listFont);
                     Paragraph l12Paragraph = new Paragraph(l12);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -436,17 +449,19 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     Paragraph l14Paragraph = new Paragraph(l14);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l15 = new Chunk("J. Foundation generally                    115              Sq.M          120           13800", listFont);
+                    Chunk l15 = new Chunk("J. Foundation generally                    "+foundation_volume+"              Cu.M       "+foundation_rate+"              "+foundation_amount, listFont);
                     Paragraph l15Paragraph = new Paragraph(l15);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
-                    Chunk l16 = new Chunk("K. Beds, poured on laterite earth                    115              Sq.M          120           13800", listFont);
+                    Chunk l16 = new Chunk("K. Beds, poured on laterite earth                    "+beds_poured_on_laterite_volume+"             Cu.M          "+beds_poured_on_laterite_rate+"           "+beds_poured_on_laterite_amount, listFont);
                     Paragraph l16Paragraph = new Paragraph(l16);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
+
 //                    reinforcement_bar_amount, masonry_wall_amount,
 //                            masonry_wall2_amount, f_amount, hardcore_amount, anti_termite_amount, level_compact_bottom_amount, foundation_amount,
 //                            beds_poured_on_laterite_amount, clear_polythene_amount;
-                    Chunk l17 = new Chunk("To Collection                                              13800", listFont);
+                    int collection_amount = topsoil_amount+trench_amount+em_amount+sem_amount+f_amount+hardcore_amount+ anti_termite_amount+level_compact_bottom_amount+ foundation_amount +beds_poured_on_laterite_amount;
+                    Chunk l17 = new Chunk("To Collection                                                                   "+collection_amount, listFont);
                     Paragraph l17Paragraph = new Paragraph(l17);
                     listParagraph.setAlignment(Element.ALIGN_CENTER);
 
@@ -455,7 +470,7 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     document.add(new Paragraph(""));
                     document.add(listParagraph);
                     document.add(new Chunk(lineSeparator));
-//                    document.add(l1Paragraph);
+                    document.add(l1Paragraph);
                     document.add(new Chunk(lineSeparator));
                     document.add(l2Paragraph);
                     document.add(new Chunk(lineSeparator));
@@ -465,11 +480,11 @@ public class GroundWork extends AppCompatActivity implements TitleDialog.TitleDi
                     document.add(new Chunk(lineSeparator));
                     document.add(l5Paragraph);
                     document.add(new Chunk(lineSeparator));
+                    document.add(l41Paragraph);
+                    document.add(new Chunk(lineSeparator));
                     document.add(l6Paragraph);
                     document.add(new Chunk(lineSeparator));
                     document.add(l7Paragraph);
-                    document.add(new Chunk(lineSeparator));
-                    document.add(l8Paragraph);
                     document.add(new Chunk(lineSeparator));
                     document.add(l8Paragraph);
                     document.add(new Chunk(lineSeparator));

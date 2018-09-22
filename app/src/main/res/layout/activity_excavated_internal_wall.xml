@@ -253,21 +253,6 @@
                 android:inputType="number"
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
-            <!-- em desc-->
-            <EditText
-                android:id="@+id/em_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_emRate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
 
             <!-- Disposal: Selected Excavated Material-->
             <TextView
@@ -277,7 +262,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textColor="#e9252424"
-                android:layout_below="@id/em_desc"
+                android:layout_below="@id/et_emRate"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
                 android:text="B. Selected Excavated Material "
@@ -317,27 +302,12 @@
                 android:hint="Rate"
                 android:layout_marginBottom="5dp"/>
 
-            <EditText
-                android:id="@+id/sem_desc"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:textSize="16sp"
-                android:background="@drawable/reounded_edittext"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                android:layout_below="@id/et_semRate"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="16dp"
-                android:layout_centerHorizontal="true"
-                android:hint="Description"
-                android:layout_marginBottom="5dp"/>
-
             <!-- Title : Formwork for Instu Concrete-->
             <TextView
                 android:id="@+id/formwork_for_instu_concrete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sem_desc"
+                android:layout_below="@id/et_semRate"
                 android:layout_marginTop="10dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
