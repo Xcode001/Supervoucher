@@ -18,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
     String[] elements = {"Element 1", "Element 2", "Element 3", "Element 4", "Element 5", "Element 6", "Element 7", "ELement 8", "Element 9", "Element 10" };
 
-    String[] elemDesc = {"Groundwork", "Roof", "Cladding/Covering", "External/Internal walls", "Windows and Doors", "Wall finishes", "Floor finishes", "Ceiling finishes", "Mechanical Intallations", "Electrical installations"};
+    String[] elemDesc = {"Groundwork", "External/Internal wallsRoof", "Cladding/Covering", "Roof", "Windows and Doors", "Wall finishes", "Floor finishes", "Ceiling finishes", "Mechanical Intallations", "Electrical installations"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +40,16 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(ground_intent);
                         break;
                     case 1:
-                        Intent roof_intent = new Intent(getApplicationContext(), StructruralCarcassingActivity.class);
-                        startActivity(roof_intent);
+                        Intent external_intent = new Intent(getApplicationContext(), ExternalInternalWallActivity.class);
+                        startActivity(external_intent);
                         break;
                     case 2:
                         Intent covering_intent = new Intent(getApplicationContext(), Cladding_and_Covering_Activity.class);
                         startActivity(covering_intent);
                         break;
                     case 3:
-                        Intent external_intent = new Intent(getApplicationContext(), ExternalInternalWallActivity.class);
-                        startActivity(external_intent);
+                        Intent roof_intent = new Intent(getApplicationContext(), StructruralCarcassingActivity.class);
+                        startActivity(roof_intent);
                         break;
                     case 4:
                         Intent windows_intent = new Intent(getApplicationContext(), WindowsDoorsActivity.class);
